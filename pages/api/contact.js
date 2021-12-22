@@ -16,7 +16,7 @@ const handler = async (req, res) => {
 
     const client = await connectToDb()
     try { 
-      const result = await client.db().collection(process.env.db_collection).insertOne(newMessage)
+      const result = await client.db().collection(process.env.DB_COLLECTION).insertOne(newMessage)
       client.close()
     }
     catch(err) {
